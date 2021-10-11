@@ -1,42 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 </head>
+
 <body>
-    <h1>Hola!</h1>
-    <button id="boton-inicio">Iniciar Sesión</button>
-    <form class="ocultar">
-        <label>Usuario
-            <input id="usuario" type="text"></label>
+    <div class="section">
+        <div class="container">
+            <div class="box column is-6 is-offset-3 has-background-link ">
+                <h1 class="title is-3 has-text-white">Hola!</h1>
+                <button id="boton-inicio" class="button is-success is-fullwidth">Iniciar Sesión</button>
+                <form class="is-hidden">
+                    <div class="field">
+                        <div class="control">
+                            <label for="usuario" class="label has-text-white">Usuario</label>
+                            <input id="usuario" type="text" class="input">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="control">
+                            <label class="label has-text-white">Contraseña</label>
+                            <input id="input-contrasenia" type="password" class="input">
+                        </div>
+                    </div>
 
-        <label>Contraseña
-            <input id="input-contrasenia" type="password">
-        </label>
+                    <button id="boton-submit" type="button" class="button is-success">Enviar</button>
 
-        <button id="boton-submit" type="button">Enviar</button>
-    </form>
-    <button id="cambiar-datos" class="ocultar">Cambiar mis datos</button>
-    <button id="cerrar-sesion" class="ocultar">Cerrar Sesión</button>
+                </form>
 
-    <form id = "formulario-cambiar-datos" class="ocultar">
-        <label>Usuario
-            <input id="usuario-nuevo-dato" type="text"></label>
+                <div class="buttons is-rigth">
+                    <button id="cambiar-datos" class="is-hidden button is-primary">Cambiar mis datos</button>
+                    <button id="cerrar-sesion" class="is-hidden button is-danger">Cerrar Sesión</button>
+                </div>
 
-        <label>Contraseña
-            <input id="input-contrasenia-nueva" type="password">
-        </label>
-
-        <button id="boton-nueva-informacion" type="button">Enviar</button>
-    </form>
-
-
+                <form id="formulario-cambiar-datos" class="is-hidden">
+                    <div class="field">
+                        <div class="control">
+                            <label for="usuario-nuevo-dato" class="label has-text-white">Usuario</label>
+                            <input id="usuario-nuevo-dato" type="text" class="input">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="control">
+                            <label for="input-contrasenia-nueva" class="label has-text-white">Contraseña</label>
+                            <input id="input-contrasenia-nueva" type="password" class="input">
+                        </div>
+                    </div>
+                    <button id="boton-nueva-informacion" type="button" class="button is-success">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
 
     <script src="index.js"></script>
 </body>
+
 </html>

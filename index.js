@@ -78,7 +78,7 @@ const usuario = {
 }
 
 botonInicio.onclick = () =>{
-  formulario.classList.remove("ocultar")
+  formulario.classList.remove("is-hidden")
 }
 
 //2. Crear la funcion que valide usuario y contrasenia. Guarde esa información en local storage. Modifique el HTML.
@@ -88,10 +88,10 @@ botonSubmit.onclick = () =>{
     saludar(usuario)
     usuario.sesionIniciada = true
     guardarEnLocalStorage(usuario, "Usuario")
-    formulario.classList.add("ocultar")
-    botonInicio.classList.add("ocultar")
-    botonCerrarSesion.classList.remove("ocultar")
-    botonCambiarDatos.classList.remove("ocultar")
+    formulario.classList.add("is-hidden")
+    botonInicio.classList.add("is-hidden")
+    botonCerrarSesion.classList.remove("is-hidden")
+    botonCambiarDatos.classList.remove("is-hidden")
   }
   else{alert("Contraseña o usuario incorrecto. Probá de nuevo!")}
 }
@@ -102,11 +102,11 @@ botonCerrarSesion.onclick = ()=>{
   usuario.sesionIniciada = false;
   guardarEnLocalStorage(usuario, "Usuario")
   h1.textContent = "Hola!";
-  botonInicio.classList.remove("ocultar")
-  botonCerrarSesion.classList.add("ocultar")
-  botonCambiarDatos.classList.add("ocultar")
-  formulario.classList.add("ocultar")
-  formularioCambioDatos.classList.add("ocultar")
+  botonInicio.classList.remove("is-hidden")
+  botonCerrarSesion.classList.add("is-hidden")
+  botonCambiarDatos.classList.add("is-hidden")
+  formulario.classList.add("is-hidden")
+  formularioCambioDatos.classList.add("is-hidden")
 }
 
 ////////////// Función para mantener la sesion iniciada //////////////////
@@ -116,18 +116,18 @@ const usuarioSesion = leerDesdeLocalStorage("Usuario")
 const mantenerSesionIniciada = (objeto) =>{
   if(objeto.sesionIniciada === true){
     saludar(usuario)
-    formulario.classList.add("ocultar")
-    botonInicio.classList.add("ocultar")
-    botonCerrarSesion.classList.remove("ocultar")
-    botonCambiarDatos.classList.remove("ocultar")
+    formulario.classList.add("is-hidden")
+    botonInicio.classList.add("is-hidden")
+    botonCerrarSesion.classList.remove("is-hidden")
+    botonCambiarDatos.classList.remove("is-hidden")
   }
   else if(objeto.sesionIniciada === false){
     h1.textContent = "Hola!";
-    botonInicio.classList.remove("ocultar")
-    botonCerrarSesion.classList.add("ocultar")
-    botonCambiarDatos.classList.add("ocultar")
-    formulario.classList.add("ocultar")
-    formularioCambioDatos.classList.add("ocultar")
+    botonInicio.classList.remove("is-hidden")
+    botonCerrarSesion.classList.add("is-hidden")
+    botonCambiarDatos.classList.add("is-hidden")
+    formulario.classList.add("is-hidden")
+    formularioCambioDatos.classList.add("is-hidden")
   }
  }
 
@@ -136,7 +136,7 @@ const mantenerSesionIniciada = (objeto) =>{
  /////////////// Función cambiar nombre de usuario y contraseña. Que lo guarde en local storage /////////
 
 botonCambiarDatos.onclick = () =>{
-  formularioCambioDatos.classList.remove("ocultar")
+  formularioCambioDatos.classList.remove("is-hidden")
 }
 
 botonNuevaInformacion.onclick = () => {
