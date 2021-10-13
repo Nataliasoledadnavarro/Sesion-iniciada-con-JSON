@@ -22,8 +22,16 @@ const formularioCambioDatos = document.querySelector(
 
 /////FUNCIONES AUXILIARES //////
 
+const capitalizarNombre = (str) =>{
+  return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase()
+}
+
+
 const saludar = (objeto) => {
-  h1.textContent = `Hola ${objeto.nombre}!`;
+
+  let nombreCapitalizado = capitalizarNombre(objeto.nombre)
+
+  h1.textContent = `Hola ${nombreCapitalizado}!`;
 };
 
 const modificarNombreDeUsuario = (user, nuevoNombre) => {
@@ -72,7 +80,7 @@ const leerDesdeLocalStorage = (clave) => {
 
 //1. Guardar objeto en local Storage
 const usuario = {
-  nombre: "Natalia",
+  nombre: "natalia",
   contrasenia: "lala",
   sesionIniciada : false
 }
